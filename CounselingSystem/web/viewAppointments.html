@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Appointments | Counseling System</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #e9eef2;
+        display: flex;
+        min-height: 100vh;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        width: 220px;
+        background-color: #003366;
+        color: white;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .sidebar h2 {
+        text-align: center;
+        margin: 0 0 20px 0;
+        font-size: 1.3em;
+    }
+    .sidebar a {
+        color: #d1e2f3;
+        text-decoration: none;
+        padding: 10px;
+        margin-bottom: 5px;
+        border-radius: 4px;
+        display: block;
+    }
+    .sidebar a:hover, .sidebar .active {
+        background-color: #0056b3;
+    }
+    .sidebar .user-info {
+        margin-top: auto;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255,255,255,0.2);
+        font-size: 0.9em;
+    }
+    .sidebar .user-info a {
+        display: block;
+        margin-top: 10px;
+        background-color: #cc0000;
+        color: white;
+        text-align: center;
+        padding: 8px;
+        border-radius: 4px;
+        text-decoration: none;
+    }
+
+    /* Main content */
+    .main-content {
+        flex-grow: 1;
+        padding: 30px;
+    }
+    h1 {
+        color: #003366;
+        margin-bottom: 20px;
+    }
+
+    /* Appointment table */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    th, td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+    th {
+        background-color: #0056b3;
+        color: white;
+    }
+    tr:hover {
+        background-color: #f1f7ff;
+    }
+    .action-btn {
+        background-color: #0056b3;
+        color: white;
+        padding: 6px 10px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 0.9em;
+    }
+    .action-btn:hover {
+        background-color: #003f80;
+    }
+
+    @media (max-width: 768px) {
+        .sidebar {
+            width: 100%;
+            flex-direction: row;
+            overflow-x: auto;
+        }
+        .sidebar h2 {
+            font-size: 1em;
+            margin-right: 20px;
+        }
+        .sidebar a {
+            margin-right: 10px;
+            display: inline-block;
+        }
+        .main-content {
+            padding: 15px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>Student Dashboard</h2>
+    <a href="dashboardStudent.html">Dashboard</a>
+    <a href="scheduleAppointment.html">Schedule Appointment</a>
+    <a href="#" class="active">My Appointments</a>
+    <a href="profileStudent.html">Profile Student</a>
+
+    <div class="user-info">
+        <p>ID: S1001</p>
+        <p>Name: Maisara Mahmud</p>
+        <a href="index.html">Logout</a>
+    </div>
+</div>
+
+<div class="main-content">
+    <h1>My Appointments</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Counselor</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Location</th>
+                <th>Reason</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Dr. Zulhelmie Ahmad</td>
+                <td>15 Dec 2025</td>
+                <td>10:00 AM</td>
+                <td>Room 301</td>
+                <td>Stress and time management</td>
+                <td>Upcoming</td>
+                <td><a href="#" class="action-btn">Cancel</a></td>
+            </tr>
+            <tr>
+                <td>Dr. Zuraida Ibrahim</td>
+                <td>05 Nov 2025</td>
+                <td>2:00 PM</td>
+                <td>Room 210</td>
+                <td>Career guidance</td>
+                <td>Completed</td>
+                <td><a href="feedback.html" class="action-btn">Feedback</a></td>
+            </tr>
+            <tr>
+                <td>Dr. Lily Zaid</td>
+                <td>20 Oct 2025</td>
+                <td>11:00 AM</td>
+                <td>Room 101</td>
+                <td>Personal issues</td>
+                <td>Completed</td>
+                <td><a href="feedback.html" class="action-btn">Feedback</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
